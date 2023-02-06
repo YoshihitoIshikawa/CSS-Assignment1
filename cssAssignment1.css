@@ -1,0 +1,848 @@
+body {
+    color: #333;
+    font-family: "游ゴシック",YuGothic,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 0;
+}
+  
+.firstView-top{
+  background-image: url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/top-hero.jpg);
+ display: flex;
+ background-size: cover;
+ background-position: center;
+  padding-top: 200px;
+ height: 450px;
+ position: relative;
+}
+
+.menu-btn{
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  height: 50px;
+  width: 50px;
+  justify-content:center;
+  align-items:center;
+  z-index: 10;
+  background-color: white;
+  display: none;
+}
+
+.menu-btn span,
+.menu-btn span:before,
+.menu-btn span:after{
+  content: "";
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background-color: black;
+  position: absolute;
+}
+
+.menu-btn span:before{
+  bottom: 8px;
+}
+
+.menu-btn span:after{
+  top: 8px;
+}
+#menu-btn-check{
+  display: none;
+}
+
+#menu-btn-check:checked ~ .menu-btn span{
+  background-color: rgba(
+  255,
+  255,
+  255,
+  0
+  );
+}
+
+#menu-btn-check:checked ~ .menu-btn span::before{
+  bottom: 0;
+  transform: rotate(45deg);
+}
+
+#menu-btn-check:checked ~ .menu-btn span::after{
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+.menu-content{
+  overflow-y: scroll;
+  position: fixed;
+  top: 60px;
+  left: 100%;
+  width: 100%;
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 75px;
+  transition: transform .5s;
+  z-index: 99;
+  background-color: rgba(0,0,0,.8);
+  height: 100%;
+  text-align: center;
+}
+
+.menu-content ul li{
+  list-style: none;
+  align-items:center;
+  display: flex;
+  justify-content:center;
+  
+}
+
+.menu-content ul li a{
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.menu-content ul li a>span:first-child{
+  letter-spacing: 5px;
+  font-family: 'Lato',sans-serif;
+}
+
+.menu-content ul li a>span:last-child{
+  font-size: 12px;
+  margin-top: 10px;
+  color: #f79214;
+  letter-spacing: 2px;
+}
+
+.menu-content-btn{
+  background-color: #f79214;
+  align-items:center;
+  display: flex;
+  justify-content:center;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 35px;
+  text-decoration: none;
+  text-align: center;
+  width: 150px;
+  height: 30px;
+}
+
+
+#menu-btn-check:checked ~ .menu-content{
+  left: 0;
+}
+
+.topBar-right{
+  display:flex;
+  text-align:center;
+  gap:40px;
+  position:absolute;
+  right: 30px;
+  top:10px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
+  
+}
+
+.topBar-left{
+  position: absolute;
+  top: 10px;
+  left:20px;
+}
+
+.topBar-right-items{
+  text-decoration: none;
+  color: black;
+}
+
+.topBar-right-items:hover{
+  color: #555555;
+}
+
+.topBar-right-items>span:first{
+  font-family: 'Lato',sans-serif;
+  
+}
+
+.topBar-right-items>span:last-child{
+  font-size: 10px;
+}
+
+.topBar-right-last{
+  background-color: #f79214;
+  align-items:center;
+  display: flex;
+  padding: 10px 25px;
+  color: white;
+  border-radius: 35px;
+  text-decoration: none;
+  width: fit-content;
+}
+
+.topBar-right-last:hover{
+  background-color: #ffaa55;
+}
+
+.centerTextBox{
+  position: absolute;
+  top:70px;
+  left: 150px;
+}
+
+.centerTextBox_top{
+  font-size: 38px;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.centerTextBox_middle{
+  display: flex;
+  align-items:center;
+}
+
+.centerTextBox_middle img{
+  margin-right: 8px;
+  margin-left: 12px;
+}
+
+.centerTextBox_bottom{
+  display: flex;
+  align-items:center;
+  list-style: none;
+  gap:20px;
+}
+
+.centerTextBox_bottom_1{
+  background-color: #f79214;
+  align-items:center;
+  padding: 25px 45px;
+  color: white;
+  border-radius: 35px;
+  text-decoration: none;
+}
+
+.centerTextBox_bottom_2{
+  align-items:center;
+  padding: 25px 25px;
+  color: black;
+  border-radius: 35px;
+  border: 1px solid #C0C0C0;
+  text-decoration: none;
+}
+
+.centerTextBox_bottom_1:hover{
+  background-color: #ffaa55;
+}
+
+.centerTextBox_bottom_2:hover{
+  color: #555555;
+}
+
+.bottomTextBox{
+  position: absolute;
+  bottom:10px;
+  left: 150px;
+  font-size: 12px;
+  color: #808080;
+  padding-bottom: 0;
+}
+
+.orangeBack{
+  height: 370px;
+  background-color: #f79214;
+  
+}
+
+.intro_container{
+  display: flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 45px 50px;
+  position: relative;
+  max-width: 1060px;
+}
+
+.intro_vid{
+  width: 500px;
+  
+}
+
+.intro_text{
+  color: white;
+  width: 500px
+}
+
+.intro_text_top{
+  font-family: 'Lato',sans-serif;
+  font-size: 38px;
+  margin-bottom: 0;
+}
+
+.intro_text_middle{
+  font-size: 16px;
+}
+
+.intro_text_bottom{
+  font-size: 18px;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items:center;
+}
+
+.intro_text_bottom>span{
+  margin-left: 5px;
+}
+
+.fixedFooter img {
+  position: fixed;
+  right:5px;
+  bottom: 20px;
+  max-width: 350px;
+}
+
+@media screen and (max-width:1024px) {
+  
+.firstView-top{
+ background-image: url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/top-hero.jpg);
+ display: flex;
+ background-size: cover;
+ background-position: center;
+ height: 470px;
+ position: relative;
+ margin-top: 55px;
+ width: 1024px;
+}
+
+.menu-btn{
+  position: fixed;
+  top: 5px;
+  right: 20px;
+  display: flex;
+  height: 50px;
+  width: 50px;
+  justify-content:center;
+  align-items:center;
+  z-index: 10;
+  background-color: white;
+  
+}
+
+.menu-btn span,
+.menu-btn span:before,
+.menu-btn span:after{
+  content: "";
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background-color: black;
+  position: absolute;
+}
+
+.menu-btn span:before{
+  bottom: 8px;
+}
+
+.menu-btn span:after{
+  top: 8px;
+}
+#menu-btn-check{
+  display: none;
+}
+
+#menu-btn-check:checked ~ .menu-btn span{
+  background-color: rgba(
+  255,
+  255,
+  255,
+  0
+  );
+}
+
+#menu-btn-check:checked ~ .menu-btn span::before{
+  bottom: 0;
+  transform: rotate(45deg);
+}
+
+#menu-btn-check:checked ~ .menu-btn span::after{
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+.menu-content{
+  overflow-y: scroll;
+  position: fixed;
+  top: 55px;
+  left: 100%;
+  width: 100%;
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 75px;
+  transition: transform .5s;
+  z-index: 99;
+  background-color: rgba(0,0,0,.8);
+  height: 100%;
+  text-align: center;
+}
+
+.menu-content ul li{
+  list-style: none;
+  align-items:center;
+  display: flex;
+  justify-content:center;
+  
+}
+
+.menu-content ul li a{
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.menu-content ul li a>span:first-child{
+  letter-spacing: 5px;
+  font-family: 'Lato',sans-serif;
+}
+
+.menu-content ul li a>span:last-child{
+  font-size: 12px;
+  margin-top: 10px;
+  color: #f79214;
+  letter-spacing: 2px;
+}
+
+.menu-content-btn{
+  background-color: #f79214;
+  align-items:center;
+  display: flex;
+  justify-content:center;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 35px;
+  text-decoration: none;
+  text-align: center;
+  width: 150px;
+  height: 30px;
+}
+
+.topBar{
+  width: 100%;
+  height: 55px;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+
+.topBar-right{
+  display:flex;
+  text-align:center;
+  gap:40px;
+  position:absolute;
+  right: 30px;
+  top:10px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
+  display: none;
+}
+
+.topBar-left{
+  position: absolute;
+  top: 20px;
+  left:20px;
+  z-index: 3;
+}
+
+.topBar-right-items{
+  text-decoration: none;
+  color: black;
+}
+
+.topBar-right-items:hover{
+  color: #555555;
+}
+
+.topBar-right-items>span:first{
+  font-family: 'Lato',sans-serif;
+  
+}
+
+.topBar-right-items>span:last-child{
+  font-size: 10px;
+}
+
+.topBar-right-last{
+  background-color: #f79214;
+  align-items:center;
+  display: flex;
+  padding: 10px 25px;
+  color: white;
+  border-radius: 35px;
+  text-decoration: none;
+}
+
+.topBar-right-last:hover{
+  background-color: #ffaa55;
+}
+
+.centerTextBox{
+  position: absolute;
+  top:70px;
+  left: 50px;
+}
+
+.centerTextBox_top{
+  font-size: 38px;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.centerTextBox_middle{
+  display: flex;
+  align-items:center;
+}
+
+.centerTextBox_middle img{
+  margin-right: 8px;
+  margin-left: 12px;
+}
+
+.centerTextBox_bottom{
+  display: flex;
+  align-items:center;
+  list-style: none;
+  gap:20px;
+}
+
+.centerTextBox_bottom_1{
+  background-color: #f79214;
+  align-items:center;
+  padding: 25px 45px;
+  color: white;
+  border-radius: 35px;
+  text-decoration: none;
+}
+
+.centerTextBox_bottom_2{
+  align-items:center;
+  padding: 25px 25px;
+  color: black;
+  border-radius: 35px;
+  border: 1px solid #C0C0C0;
+  text-decoration: none;
+}
+
+.centerTextBox_bottom_1:hover{
+  background-color: #ffaa55;
+}
+
+.centerTextBox_bottom_2:hover{
+  color: #555555;
+}
+
+.bottomTextBox{
+  position: absolute;
+  bottom:10px;
+  left: 50px;
+  font-size: 12px;
+  color: #808080;
+  padding-bottom: 0;
+}
+
+.orangeBack{
+  height: 600px;
+  background-color: #f79214;
+  padding: 40px 0;
+  width: 1024px;
+  
+}
+
+
+.intro_container{
+  padding: 0 40px;
+  display: flex;
+  align-items:center;
+  flex-direction:column;
+}
+
+.intro_vid{
+  width: 700px;
+  margin-bottom: 15px;
+  
+}
+
+.intro_text{
+  color: white;
+  display: flex;
+  align-items:flex-start;
+  flex-direction: column;
+  margin-top: 0;
+  padding: 0 0;
+  width:700px;
+}
+
+.intro_text_top{
+  font-family: 'Lato',sans-serif;
+  font-size: 38px;
+  margin-bottom: 5px;
+  margin-top: 0;
+}
+
+.intro_text_middle{
+  font-size: 16px;
+  margin-top: 0;
+}
+
+.intro_text_bottom{
+  font-size: 18px;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items:center;
+}
+
+.intro_text_bottom>span{
+  margin-left: 5px;
+}
+
+.fixedFooter img {
+  position: fixed;
+  right:5px;
+  bottom: 20px;
+  max-width: 350px;
+}
+  
+div {
+  display: block;
+}
+
+  
+}
+  
+@media screen and (max-width:425px) {
+  
+.firstView-top{
+ background-image: url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/top-hero-sp.jpg.webp);
+ display: block;
+ height: 270px;
+ width: 425px;
+}
+
+.topBar{
+  width: 100%;
+  height: 55px;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+
+.topBar-right{
+  display:flex;
+  text-align:center;
+  gap:40px;
+  position:absolute;
+  right: 30px;
+  top:10px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
+  display: none;
+}
+
+.topBar-left{
+  position: absolute;
+  top: 20px;
+  left:20px;
+  z-index: 3;
+}
+
+.topBar-right-items{
+  text-decoration: none;
+  color: black;
+}
+
+.topBar-right-items:hover{
+  color: #555555;
+}
+
+.topBar-right-items>span:first{
+  font-family: 'Lato',sans-serif;
+  
+}
+
+.topBar-right-items>span:last-child{
+  font-size: 10px;
+}
+
+.topBar-right-last{
+  background-color: #f79214;
+  align-items:center;
+  display: flex;
+  padding: 10px 25px;
+  color: white;
+  border-radius: 35px;
+  text-decoration: none;
+}
+
+.topBar-right-last:hover{
+  background-color: #ffaa55;
+}
+
+.centerTextBox{
+  position: absolute;
+  top:270px;
+  left: 15px;
+  width: 370px;
+}
+
+.centerTextBox_top{
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.centerTextBox_middle{
+  display: flex;
+  align-items:center;
+}
+
+.centerTextBox_middle img{
+  margin-right: 8px;
+  margin-left: 12px;
+  width: 90%;
+}
+
+.centerTextBox_bottom{
+  display: flex;
+  align-items:center;
+  list-style: none;
+}
+
+.centerTextBox_bottom_1{
+  background-color: #f79214;
+  display: flex;
+  align-items:center;
+  padding: 15px 60px;
+  justify-content:center;
+  color: white;
+  border-radius: 35px;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.centerTextBox_bottom_2{
+  align-items:center;
+  padding: 25px 25px;
+  color: black;
+  border-radius: 35px;
+  border: 1px solid #C0C0C0;
+  text-decoration: none;
+  display: none;
+}
+
+.centerTextBox_bottom_1:hover{
+  background-color: #ffaa55;
+}
+
+.centerTextBox_bottom_2:hover{
+  color: #555555;
+}
+
+.bottomTextBox{
+  position: absolute;
+  top:600px;
+  left: 15px;
+  font-size: 12px;
+  color: #808080;
+  padding-bottom: 0;
+}
+
+
+.orangeBack{
+  height: auto;
+  background-color: #f79214;
+  padding: 40px 0;
+  margin-top: 230px;
+  margin-bottom: 100px;
+  width: 425px;
+}
+
+
+.intro_container{
+  padding: 0 40px;
+  display: flex;
+  align-items:center;
+  flex-direction:column;
+}
+
+.intro_vid{
+  width: 370px;
+  margin-bottom: 15px;
+  
+}
+
+.intro_text{
+  color: white;
+  display: flex;
+  align-items:flex-start;
+  flex-direction: column;
+  margin-top: 0;
+  padding: 0 0;
+  width:370px;
+}
+
+.intro_text_top{
+  font-family: 'Lato',sans-serif;
+  font-size: 36px;
+  margin-bottom: 5px;
+  margin-top: 0;
+}
+
+.intro_text_middle{
+  font-size: 16px;
+  margin-top: 0;
+}
+
+.intro_text_bottom{
+  font-size: 18px;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items:center;
+}
+
+.intro_text_bottom>span{
+  margin-left: 5px;
+}
+
+.fixedFooter img {
+  position: fixed;
+  bottom: 20px;
+  right:30px;
+  max-width: 370px;
+}
+
+.fixedFooter{
+  height: 110px;
+  width:100%;
+  background-color: white;
+  bottom: 0;
+  position: fixed;
+}
+  
+div {
+  display: block;
+}
+
+  
+}
+
